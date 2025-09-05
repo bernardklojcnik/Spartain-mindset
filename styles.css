@@ -1,0 +1,60 @@
+==== FILE: styles.css ====
+:root{
+--bg:#0d0f12; /* deep charcoal */
+--ink:#e9eef3; /* soft white */
+--muted:#aeb6c2; /* cool gray */
+--card:#151922; /* panel */
+--line:#222938; /* border */
+--brand:#d9472b; /* Spartan red */
+--brand-2:#f1b24a; /* warm accent */
+--measure:65ch; /* comfortable reading width */
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans",sans-serif}
+img{max-width:100%;display:block;border-radius:12px}
+a{color:var(--brand)}
+
+
+.site-header{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.site-header nav a{margin-left:16px;color:var(--muted);text-decoration:none}
+.site-header nav a:hover{color:var(--ink)}
+.brand{font-weight:800}
+
+
+.hero{max-width:1100px;margin:16px auto;padding:22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,#161b24,#12151b);display:grid;gap:16px;grid-template-columns:1.2fr .8fr;align-items:center}
+.hero .lead{color:var(--muted)}
+.hero .quick-card{margin:12px 0;padding:12px;border:1px dashed var(--line);border-radius:12px;background:#12151b}
+.hero .cta-row{display:flex;gap:10px;flex-wrap:wrap}
+.hero-art img{aspect-ratio:4/3;object-fit:cover}
+
+
+.section{max-width:1100px;margin:22px auto;padding:0 20px}
+.card{padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.features{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.feature{padding:14px;border:1px solid var(--line);border-radius:12px;background:#12161f}
+
+
+.prose{max-width:var(--measure);margin:0 auto;padding:0 12px}
+.prose h1,.prose h2,.prose h3{line-height:1.25;margin:1.2em 0 .4em}
+.prose p{margin:.8em 0}
+.prose ol,.prose ul{margin:.8em 0 .8em 1.2em}
+.prose a{text-decoration:underline;text-underline-offset:2px}
+
+
+.pdf-wrap{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0f131a}
+
+
+.btn{display:inline-block;background:var(--brand);color:#0b0d11;padding:10px 14px;border-radius:12px;font-weight:800;text-decoration:none;border:0}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn:hover{filter:brightness(1.07)}
+
+
+.contact{display:grid;gap:10px;max-width:520px}
+.contact input,.contact textarea{width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0f131a;color:var(--ink)}
+.contact button{justify-self:start}
+
+
+.site-footer{max-width:1100px;margin:36px auto 60px;padding:0 20px;color:var(--muted)}
+
+
+@media (max-width:860px){ .hero{grid-template-columns:1fr} }
